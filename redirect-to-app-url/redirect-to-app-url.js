@@ -8,7 +8,7 @@ console.log(`start listening on ${addr}:${port}`);
 console.log(`try 'open http://${addr}:${port}'`)
 
 http.createServer((req, res) => {
-  res.writeHead(302, {'Location': 'dict://programming'});
+  res.writeHead(302, {'Location': 'dict:/biriyani'});
   res.end();
 }).listen(port, addr);
 

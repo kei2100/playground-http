@@ -25,13 +25,14 @@ CGI.parse("a[]=1&a[]=0")
 ```
 
 ### Go
+##### url.ParseQuery
 ```go
 // 値が配列になる。キーは"a"
 v, _ := url.ParseQuery("a=0&a=1")
 fmt.Printf("%v", v)
 // map[a:[0 1]]
 
-# 値が配列になる。キーは"a[]"
+// 値が配列になる。キーは"a[]"
 v, _ := url.ParseQuery("a[]=0&a[]=1")
 fmt.Printf("%v", v)
 // map[a[]:[0 1]]
